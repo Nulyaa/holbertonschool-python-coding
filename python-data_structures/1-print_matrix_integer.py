@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-print_matrix_integer = __import__('1-print_matrix_integer').print_matrix_integer
+def print_matrix_integer(matrix=[[]]):
+    if matrix == [[]]:
+        print("")
+        return
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-
-print_matrix_integer(matrix)
-print("--")
-print_matrix_integer()
+    for row in matrix:
+        for i in range(len(row)):
+            if i != len(row) - 1:
+                print("{:d}".format(row[i]), end=" ")
+            else:
+                print("{:d}".format(row[i]))
